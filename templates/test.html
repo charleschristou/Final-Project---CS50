@@ -1,0 +1,31 @@
+
+<table>
+    <tr id="myRow">
+      <td>10</td>
+      <td>25</td> <!-- This cell has a value greater than 20 -->
+      <td>15</td>
+    </tr>
+  </table>
+  
+  <script>
+    // Add an event listener for the 'DOMContentLoaded' event
+    document.addEventListener("DOMContentLoaded", function() {
+      // Get the row element by its id
+      var row = document.getElementById("myRow");
+  
+      // Get all the cells within the row
+      var cells = row.getElementsByTagName("td");
+  
+      // Iterate over the cells
+      for (var i = 0; i < cells.length; i++) {
+        // Get the integer value of the cell
+        var value = parseInt(cells[i].textContent);
+  
+        // Check if the value is greater than 20
+        if (value > 20) {
+          // Change the color of the cell
+          cells[i].style.backgroundColor = "yellow";
+        }
+      }
+    });
+  </script>
