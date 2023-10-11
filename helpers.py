@@ -10,7 +10,8 @@ def lookup(location, timesteps):
     #lookup the weather for a location
     try:
         BASE_URL = "https://api.tomorrow.io/v4/weather/forecast"
-        api_key = "eEgWKij4Z9p2Mvf6WYAAX3Wj0zFa2U1L"
+        api_key = "TOBEUPDATED"
+        # API key removed for public posting of this repository
         url = f"{BASE_URL}?location={location}&timesteps={timesteps}&units=metric&apikey={api_key}"
         headers = {"accept": "application/json"}
         r = requests.get(url, headers=headers)
